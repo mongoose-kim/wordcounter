@@ -1,9 +1,28 @@
-<h1>안녕하세요, 여기서 글자를 세세요!</h1>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800');
+        body {  
+            font-family: 'Nanum Gothic';
+        }
+        .info {
+            color: rgb(67, 129, 72);
+            font-size: 20pt;
+            text-shadow: 2px 2px 2px gray;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="info">안녕하세요, 여기서 글자를 세세요!</h1>
 
-<a href="{%url 'about'%}">ABOUT</a>
-<br>
-<form action="{%url 'result'%}">
-    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <a href="{%url 'about'%}">ABOUT</a>
     <br>
-    <input type="submit" value="Count!">
-</form>
+    <form action="{%url 'result'%}">
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br>
+        <input type="submit" value="Count!">
+    </form>
+</body>
